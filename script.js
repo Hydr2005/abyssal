@@ -60,7 +60,7 @@ body:JSON.stringify({
 
 embeds:[{
 
-title:"Nueva solicitud Abyssal",
+title:"Nueva solicitud Staff Abyssal",
 
 color:10181046,
 
@@ -68,10 +68,16 @@ fields:[
 
 {name:"Edad",value:data.get("edad")},
 {name:"Discord",value:data.get("discord")},
-{name:"Situación 1",value:data.get("pregunta1")},
-{name:"Situación 2",value:data.get("pregunta2")},
-{name:"Situación 3",value:data.get("pregunta3")},
-{name:"Situación 4",value:data.get("pregunta4")}
+
+{name:"Discusión miembros",value:data.get("situacion1")},
+{name:"Filtración staff",value:data.get("situacion2")},
+{name:"Protesta comunidad",value:data.get("situacion3")},
+{name:"Abuso permisos",value:data.get("situacion4")},
+
+{name:"Por qué elegirte",value:data.get("pregunta1")},
+{name:"Motivación staff",value:data.get("pregunta2")},
+{name:"Cualidades",value:data.get("pregunta3")},
+{name:"Extra",value:data.get("pregunta4")}
 
 ]
 

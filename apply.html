@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Solicitud Staff</title>
+<title>Postulación Staff Abyssal</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,10 +14,24 @@
 
 <div class="form-card">
 
-<h1>Solicitud Staff</h1>
+<h1>ABYSSAL</h1>
+<h2>Postulación Staff</h2>
 
 <img id="avatar">
 <p id="username"></p>
+
+<div class="requisitos">
+
+<h3>Requisitos para aplicar</h3>
+
+<ul>
+<li>Tener 14 o más años</li>
+<li>Contar con micrófono activo</li>
+<li>Ser activo en la comunidad</li>
+<li>No tener sanciones dentro de la comunidad</li>
+</ul>
+
+</div>
 
 <div class="progress">
 <div id="progress-bar"></div>
@@ -25,25 +39,37 @@
 
 <form id="form">
 
-<label>¿Cuantos años tienes?</label>
+<label>¿Cuántos años tienes?</label>
 <input required name="edad">
 
-<label>¿Cual es tu nombre en Discord?</label>
+<label>¿Cuál es tu nombre en Discord?</label>
 <input required name="discord">
 
 <label>Dos miembros de Abyssal comienzan una discusión fuerte en público dentro del servidor. ¿Cómo manejarías la situación?</label>
+<textarea required name="situacion1"></textarea>
+
+<label>Descubres que alguien del staff está filtrando información interna. ¿Qué harías?</label>
+<textarea required name="situacion2"></textarea>
+
+<label>La comunidad protesta contra una nueva regla implementada por el staff. ¿Cómo manejarías la situación?</label>
+<textarea required name="situacion3"></textarea>
+
+<label>Un miembro del staff usa sus permisos injustamente pero es amigo de los administradores. ¿Cómo actuarías?</label>
+<textarea required name="situacion4"></textarea>
+
+<label>¿Por qué crees que deberíamos elegirte a ti y no a otra persona?</label>
 <textarea required name="pregunta1"></textarea>
 
-<label>Descubres que alguien del staff filtra información. ¿Qué harías?</label>
+<label>¿Por qué quieres pertenecer al staffteam de Abyssal?</label>
 <textarea required name="pregunta2"></textarea>
 
-<label>La comunidad protesta contra una nueva regla. ¿Cómo actuarías?</label>
+<label>¿Qué cualidades destacan en ti?</label>
 <textarea required name="pregunta3"></textarea>
 
-<label>Un staff abusa de permisos pero es amigo de admins. ¿Qué harías?</label>
-<textarea required name="pregunta4"></textarea>
+<label>¿Algo más que quieras añadir a tu postulación?</label>
+<textarea name="pregunta4"></textarea>
 
-<button type="submit">Enviar solicitud</button>
+<button type="submit">Enviar Postulación</button>
 
 </form>
 

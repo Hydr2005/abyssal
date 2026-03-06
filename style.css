@@ -9,19 +9,20 @@ background:url("fondo.gif") center/cover fixed;
 
 }
 
-.login-card,.form-card,.panel{
+.login-card{
 
-background:rgba(0,0,0,0.7);
+margin-top:200px;
 
-padding:40px;
+background:rgba(0,0,0,0.8);
 
-margin:auto;
-
-margin-top:100px;
-
-width:600px;
+padding:50px;
 
 border-radius:20px;
+
+width:400px;
+
+margin-left:auto;
+margin-right:auto;
 
 box-shadow:0 0 40px purple;
 
@@ -30,6 +31,8 @@ box-shadow:0 0 40px purple;
 .discord-btn{
 
 display:inline-block;
+
+margin-top:20px;
 
 padding:15px 40px;
 
@@ -45,11 +48,63 @@ font-weight:bold;
 
 }
 
+.form-card{
+
+width:650px;
+
+margin:auto;
+
+margin-top:60px;
+
+padding:40px;
+
+background:rgba(0,0,0,0.75);
+
+border-radius:20px;
+
+box-shadow:0 0 40px purple;
+
+}
+
+.requisitos{
+
+background:rgba(20,0,40,0.8);
+
+padding:20px;
+
+border-radius:12px;
+
+margin-bottom:30px;
+
+border:1px solid #7a3cff;
+
+}
+
+.requisitos h3{
+
+margin-top:0;
+color:#c084ff;
+
+}
+
+.requisitos ul{
+
+list-style:none;
+padding:0;
+
+}
+
+.requisitos li{
+
+padding:6px;
+
+}
+
 input,textarea{
 
 width:100%;
 
-padding:10px;
+padding:12px;
 
 margin-top:10px;
 
@@ -58,6 +113,15 @@ margin-bottom:20px;
 border-radius:10px;
 
 border:none;
+
+background:#111;
+color:white;
+
+}
+
+textarea{
+
+min-height:120px;
 
 }
 
@@ -72,6 +136,16 @@ border:none;
 border-radius:10px;
 
 color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#a855f7;
 
 }
 
@@ -108,17 +182,5 @@ width:90px;
 border-radius:50%;
 
 margin-bottom:10px;
-
-}
-
-.app{
-
-background:#111;
-
-padding:20px;
-
-margin-top:20px;
-
-border-radius:10px;
 
 }
