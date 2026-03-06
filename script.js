@@ -1,92 +1,126 @@
-const token = localStorage.getItem("discord_token")
+const webhook = "https://discord.com/api/webhooks/1479434819267199047/xlL5ulI0lMyGduFZI1mP33QwF9qNYkXH0GQhxUyEHLRufsPr5Z-gzyyur457wnXM57S3";
 
-if(!token){
+document.getElementById("form").addEventListener("submit", async function(e){
 
-window.location.href="index.html"
+e.preventDefault();
 
-}
+const edad = document.querySelector('[name="edad"]').value;
+const discord = document.querySelector('[name="discord"]').value;
 
-fetch("https://discord.com/api/users/@me",{
+const situacion1 = document.querySelector('[name="situacion1"]').value;
+const situacion2 = document.querySelector('[name="situacion2"]').value;
+const situacion3 = document.querySelector('[name="situacion3"]').value;
+const situacion4 = document.querySelector('[name="situacion4"]').value;
 
-headers:{
-authorization:`Bearer ${token}`
-}
+const pregunta1 = document.querySelector('[name="pregunta1"]').value;
+const pregunta2 = document.querySelector('[name="pregunta2"]').value;
+const pregunta3 = document.querySelector('[name="pregunta3"]').value;
+const pregunta4 = document.querySelector('[name="pregunta4"]').value;
 
-})
+const user = JSON.parse(localStorage.getItem("discord_user"));
 
-.then(res=>res.json())
-.then(user=>{
+const avatar = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
 
-document.getElementById("username").innerText =
-user.username+"#"+user.discriminator
+const payload = {
 
-document.getElementById("avatar").src =
-`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`
+username:"Formularios Abyssal",
 
-})
-
-const form = document.getElementById("form")
-const progress = document.getElementById("progress-bar")
-
-form.addEventListener("input",()=>{
-
-let fields = form.querySelectorAll("input,textarea")
-
-let filled = 0
-
-fields.forEach(f=>{
-if(f.value.length>0) filled++
-})
-
-progress.style.width = (filled/fields.length)*100+"%"
-
-})
-
-form.addEventListener("submit",(e)=>{
-
-e.preventDefault()
-
-const data = new FormData(form)
-
-fetch("https://discord.com/api/webhooks/1479434819267199047/xlL5ulI0lMyGduFZI1mP33QwF9qNYkXH0GQhxUyEHLRufsPr5Z-gzyyur457wnXM57S3",{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
+avatar_url:"https://cdn-icons-png.flaticon.com/512/5968/5968756.png",
 
 embeds:[{
 
-title:"Nueva solicitud Staff Abyssal",
+title:"📋 Nueva solicitud Staff Abyssal",
 
-color:10181046,
+color:11141120,
+
+thumbnail:{
+url: avatar
+},
 
 fields:[
 
-{name:"Edad",value:data.get("edad")},
-{name:"Discord",value:data.get("discord")},
+{
+name:"👤 Usuario",
+value:`${user.username}#${user.discriminator}`,
+inline:true
+},
 
-{name:"Discusión miembros",value:data.get("situacion1")},
-{name:"Filtración staff",value:data.get("situacion2")},
-{name:"Protesta comunidad",value:data.get("situacion3")},
-{name:"Abuso permisos",value:data.get("situacion4")},
+{
+name:"🆔 ID Usuario",
+value:`${user.id}`,
+inline:true
+},
 
-{name:"Por qué elegirte",value:data.get("pregunta1")},
-{name:"Motivación staff",value:data.get("pregunta2")},
-{name:"Cualidades",value:data.get("pregunta3")},
-{name:"Extra",value:data.get("pregunta4")}
+{
+name:"🎂 Edad",
+value:edad
+},
 
-]
+{
+name:"💬 Discord",
+value:discord
+},
+
+{
+name:"⚔️ Discusión entre miembros",
+value:situacion1
+},
+
+{
+name:"🔎 Filtración del staff",
+value:situacion2
+},
+
+{
+name:"📢 Protesta de la comunidad",
+value:situacion3
+},
+
+{
+name:"🚨 Abuso de permisos",
+value:situacion4
+},
+
+{
+name:"⭐ ¿Por qué elegirte?",
+value:pregunta1
+},
+
+{
+name:"🔥 Motivación para staff",
+value:pregunta2
+},
+
+{
+name:"💎 Cualidades",
+value:pregunta3
+},
+
+{
+name:"📌 Extra",
+value:pregunta4
+}
+
+],
+
+footer:{
+text:"Sistema de Aplicaciones Abyssal"
+},
+
+timestamp:new Date()
 
 }]
 
-})
+};
 
-})
+fetch(webhook,{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(payload)
+});
 
-alert("Solicitud enviada")
+alert("✅ Solicitud enviada correctamente");
 
-})
+});
