@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 
 <meta charset="UTF-8">
-<title>Abyssal Staff Application</title>
+<title>Formulario Abyssal</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -12,19 +12,13 @@
 
 <body>
 
-<div class="form-card">
+<div class="form-container">
 
-<h1>ABYSSAL</h1>
-<h2>Postulación Staff</h2>
-
-<img id="avatar">
-<p id="username"></p>
-
-<!-- REQUISITOS -->
+<h2>Postulación Staff Abyssal</h2>
 
 <div class="requisitos">
 
-<h3>Requisitos para aplicar</h3>
+<h3>Requisitos</h3>
 
 <ul>
 <li>Tener 14 o más años</li>
@@ -35,45 +29,39 @@
 
 </div>
 
-<div class="progress">
-<div id="progress-bar"></div>
-</div>
-
 <form id="form">
 
-<!-- PREGUNTAS -->
-
 <label>¿Cuántos años tienes?</label>
-<input required name="edad">
+<input name="edad" required>
 
 <label>¿Cuál es tu nombre en Discord?</label>
-<input required name="discord">
+<input name="discord" required>
 
-<label>Dos miembros de Abyssal comienzan una discusión fuerte en público dentro del servidor y la comunidad empieza a tomar bandos. ¿Cómo manejarías la situación?</label>
-<textarea required name="situacion1"></textarea>
+<label>Dos miembros de Abyssal comienzan una discusión fuerte...</label>
+<textarea name="situacion1" required></textarea>
 
-<label>Descubres que alguien del equipo está filtrando información interna del staff de Abyssal a otra comunidad o servidor. ¿Qué harías?</label>
-<textarea required name="situacion2"></textarea>
+<label>Descubres que alguien del equipo está filtrando información...</label>
+<textarea name="situacion2" required></textarea>
 
-<label>El staff decide implementar una regla nueva que mejora la organización de la comunidad, pero la mayoría de los miembros está en contra. ¿Cómo manejarías la situación?</label>
-<textarea required name="situacion3"></textarea>
+<label>El staff decide implementar una regla nueva...</label>
+<textarea name="situacion3" required></textarea>
 
-<label>Un miembro del staff empieza a usar sus permisos injustamente pero es amigo de varios administradores. ¿Cómo actuarías?</label>
-<textarea required name="situacion4"></textarea>
+<label>Un miembro del staff empieza a abusar de permisos...</label>
+<textarea name="situacion4" required></textarea>
 
-<label>¿Por qué crees que deberíamos elegirte a ti y no a otra persona?</label>
-<textarea required name="pregunta1"></textarea>
+<label>¿Por qué crees que deberíamos elegirte?</label>
+<textarea name="pregunta1" required></textarea>
 
-<label>¿Por qué quieres pertenecer al staffteam de Abyssal?</label>
-<textarea required name="pregunta2"></textarea>
+<label>¿Por qué quieres pertenecer al staffteam de abyssal?</label>
+<textarea name="pregunta2" required></textarea>
 
 <label>¿Qué cualidades destacan en ti?</label>
-<textarea required name="pregunta3"></textarea>
+<textarea name="pregunta3" required></textarea>
 
 <label>¿Algo más que quieras añadir a tu postulación?</label>
 <textarea name="pregunta4"></textarea>
 
-<button type="submit">Enviar Postulación</button>
+<button type="submit">Enviar formulario</button>
 
 </form>
 

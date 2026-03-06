@@ -1,186 +1,71 @@
 body{
 
-margin:0;
 font-family:Arial;
 color:white;
+background:url("fondo.gif");
+background-size:cover;
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+.container{
+
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:10px;
 text-align:center;
 
-background:url("fondo.gif") center/cover fixed;
-
 }
 
-.login-card{
+.login{
 
-margin-top:200px;
-
-background:rgba(0,0,0,0.8);
-
-padding:50px;
-
-border-radius:20px;
-
-width:400px;
-
-margin-left:auto;
-margin-right:auto;
-
-box-shadow:0 0 40px purple;
-
-}
-
-.discord-btn{
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:15px 40px;
-
-background:linear-gradient(45deg,#6a00ff,#c400ff);
-
-border-radius:10px;
-
-text-decoration:none;
-
+background:#5865F2;
+padding:15px;
 color:white;
-
-font-weight:bold;
-
-}
-
-.form-card{
-
-width:650px;
-
-margin:auto;
-
-margin-top:60px;
-
-padding:40px;
-
-background:rgba(0,0,0,0.75);
-
-border-radius:20px;
-
-box-shadow:0 0 40px purple;
+text-decoration:none;
+border-radius:5px;
 
 }
 
-.requisitos{
+.form-container{
 
-background:rgba(20,0,40,0.8);
-
-padding:20px;
-
-border-radius:12px;
-
-margin-bottom:30px;
-
-border:1px solid #7a3cff;
-
-}
-
-.requisitos h3{
-
-margin-top:0;
-color:#c084ff;
-
-}
-
-.requisitos ul{
-
-list-style:none;
-padding:0;
-
-}
-
-.requisitos li{
-
-padding:6px;
+background:rgba(0,0,0,0.7);
+padding:30px;
+border-radius:10px;
+width:500px;
 
 }
 
 input,textarea{
 
 width:100%;
-
-padding:12px;
-
-margin-top:10px;
-
-margin-bottom:20px;
-
-border-radius:10px;
-
+margin:10px 0;
+padding:10px;
 border:none;
-
-background:#111;
-color:white;
-
-}
-
-textarea{
-
-min-height:120px;
+border-radius:5px;
 
 }
 
 button{
 
-padding:12px 30px;
-
-background:#8b3dff;
-
-border:none;
-
-border-radius:10px;
-
+background:#8a2be2;
 color:white;
-
-font-size:16px;
-
+padding:12px;
+border:none;
+border-radius:5px;
 cursor:pointer;
 
 }
 
-button:hover{
+.requisitos{
 
-background:#a855f7;
-
-}
-
-.progress{
-
-background:#222;
-
-height:10px;
-
-border-radius:10px;
-
+background:#1a1a1a;
+padding:10px;
 margin-bottom:20px;
-
-}
-
-#progress-bar{
-
-height:10px;
-
-width:0;
-
-background:#b14cff;
-
-border-radius:10px;
-
-transition:0.4s;
-
-}
-
-#avatar{
-
-width:90px;
-
-border-radius:50%;
-
-margin-bottom:10px;
+border-radius:5px;
 
 }
