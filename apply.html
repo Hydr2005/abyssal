@@ -1,39 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
 
 <meta charset="UTF-8">
 <title>Solicitud Staff</title>
+
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="form-container">
+<div class="form-card">
 
-<h1>Solicitud Staff Abyssal</h1>
+<h1>Solicitud Staff</h1>
 
-<form id="applyForm">
+<img id="avatar">
+<p id="username"></p>
 
-<label>¿Cuántos años tienes?</label>
-<input type="text" id="edad" required>
+<div class="progress">
+<div id="progress-bar"></div>
+</div>
 
-<label>¿Cuál es tu nombre en Discord?</label>
-<input type="text" id="discord" required>
+<form id="form">
 
-<label>Dos miembros de Abyssal comienzan una discusión fuerte en público dentro del servidor, y la comunidad empieza a tomar bandos. Ambos aportan mucho al proyecto y expulsar a alguno podría generar problemas. ¿Cómo manejarías la situación?</label>
-<textarea id="pregunta1" required></textarea>
+<label>¿Cuantos años tienes?</label>
+<input required name="edad">
 
-<label>Descubres que alguien del equipo está filtrando información interna del staff de Abyssal a otra comunidad o servidor. No tienes pruebas completamente concluyentes, pero varios indicios apuntan a esa persona. ¿Qué harías?</label>
-<textarea id="pregunta2" required></textarea>
+<label>¿Cual es tu nombre en Discord?</label>
+<input required name="discord">
 
-<label>El staff decide implementar una regla nueva que mejora la organización de la comunidad, pero la mayoría de los miembros está en contra y empieza a protestar. Si fueras parte del equipo que debe aplicarla, ¿cómo manejarías la situación?</label>
-<textarea id="pregunta3" required></textarea>
+<label>Dos miembros de Abyssal comienzan una discusión fuerte en público dentro del servidor. ¿Cómo manejarías la situación?</label>
+<textarea required name="pregunta1"></textarea>
 
-<label>Un miembro del staff empieza a usar sus permisos de forma injusta (muteos, baneos o favoritismo), pero es amigo cercano de varios administradores. ¿Cómo actuarías sin provocar un conflicto mayor dentro del equipo?</label>
-<textarea id="pregunta4" required></textarea>
+<label>Descubres que alguien del staff filtra información. ¿Qué harías?</label>
+<textarea required name="pregunta2"></textarea>
+
+<label>La comunidad protesta contra una nueva regla. ¿Cómo actuarías?</label>
+<textarea required name="pregunta3"></textarea>
+
+<label>Un staff abusa de permisos pero es amigo de admins. ¿Qué harías?</label>
+<textarea required name="pregunta4"></textarea>
 
 <button type="submit">Enviar solicitud</button>
 
@@ -41,58 +49,7 @@
 
 </div>
 
-<script>
-
-const webhook = "https://discord.com/api/webhooks/1479434819267199047/xlL5ulI0lMyGduFZI1mP33QwF9qNYkXH0GQhxUyEHLRufsPr5Z-gzyyur457wnXM57S3";
-
-document.getElementById("applyForm").addEventListener("submit", function(e){
-
-e.preventDefault()
-
-const user = JSON.parse(localStorage.getItem("discordUser"))
-
-const edad = document.getElementById("edad").value
-const discord = document.getElementById("discord").value
-const p1 = document.getElementById("pregunta1").value
-const p2 = document.getElementById("pregunta2").value
-const p3 = document.getElementById("pregunta3").value
-const p4 = document.getElementById("pregunta4").value
-
-fetch(webhook,{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body: JSON.stringify({
-
-content: `📩 **Nueva solicitud staff**
-
-👤 Usuario: ${user.username}#${user.discriminator}
-
-Edad: ${edad}
-
-Discord escrito: ${discord}
-
-1️⃣ ${p1}
-
-2️⃣ ${p2}
-
-3️⃣ ${p3}
-
-4️⃣ ${p4}`
-
-})
-
-})
-
-alert("Solicitud enviada")
-
-})
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
